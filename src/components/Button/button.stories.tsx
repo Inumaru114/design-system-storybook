@@ -19,7 +19,7 @@ Botão principal do Design System, que inclui:
   argTypes: {
     type: {
       control: "select",
-      options: ["large", "small", "toggle"],
+      options: ["large", "small", "toggle", "menu"],
       description: "Define o tipo de botão ou controle.",
     },
   },
@@ -53,5 +53,11 @@ export const ToggleOn: Story = {
   args: {
     type: "toggle",
     toggled: true,
+  },
+};
+
+export const Menu: Story = {
+  args: {
+    type: "menu",
   },
 };

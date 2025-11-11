@@ -6,7 +6,7 @@ export default {
 };
 
 export const Paleta = () => (
-  <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
+  <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', fontFamily: 'Poppins, sans-serif' }}>
     {Object.entries(colors).map(([name, value]) => (
       <div key={name} style={{ textAlign: 'center' }}>
         <div
@@ -18,8 +18,8 @@ export const Paleta = () => (
             border: '1px solid #ccc',
           }}
         />
-        <p>{name}</p>
-        <code>{value}</code>
+        <p style={{ fontWeight: 700 }}>{name}</p>
+        <code style={{ fontWeight: 700 }}>{value}</code>
       </div>
     ))}
   </div>
