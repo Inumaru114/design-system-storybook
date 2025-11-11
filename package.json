@@ -3,15 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Inumaru114.github.io/design-system-storybook",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "deploy-storybook": "storybook build && gh-pages -d storybook-static"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "styled-components": "^6.1.19"
@@ -34,6 +37,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
     "eslint-plugin-storybook": "^10.0.5",
+    "gh-pages": "^6.3.0",
     "globals": "^16.4.0",
     "playwright": "^1.56.1",
     "storybook": "^10.0.5",
