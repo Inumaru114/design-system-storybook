@@ -10,3 +10,13 @@ export default meta;
 export const Padrao: StoryObj = {
   render: () => <Input placeholder="Digite aqui..." />,
 };
+
+export const ComMicrofone: StoryObj = {
+  render: () => (
+    <Input
+      placeholder="Digite uma mensagem"
+      withMicrophone
+      onMicrophoneClick={() => alert("Microfone clicado!")}
+    />
+  ),
+};

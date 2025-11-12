@@ -1,6 +1,6 @@
 /* === Base === */
 .button {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -64,4 +64,46 @@
 
 .toggleOn .thumb {
   transform: translateX(20px);
+}
+
+/* === Menu Button === */
+.menu {
+  width: 60px;
+  height: 60px;
+  background-color: #7c8c6f;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.menu:hover {
+  background-color: #6a7a5b;
+}
+
+.menu:active {
+  transform: scale(0.95);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 28px;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

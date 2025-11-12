@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import styles from "./Button.module.css";
 
-type ButtonType = "large" | "small" | "toggle";
+type ButtonType = "large" | "small" | "toggle" | "menu";
 
 interface ButtonProps {
   type?: ButtonType;
@@ -55,6 +55,26 @@ export const Button: React.FC<ButtonProps> = ({
         disabled={disabled}
       >
         <span className={styles.thumb} />
+      </button>
+    );
+  }
+
+  if (type === "menu") {
+    return (
+      <button
+        className={clsx(
+          styles.menu,
+          disabled && styles.disabled
+        )}
+        onClick={handleClick}
+        disabled={disabled}
+        aria-label="Menu"
+      >
+        <span className={styles.hamburger}>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
+          <span className={styles.line}></span>
+        </span>
       </button>
     );
   }
